@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mentify</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/reset-css@5.0.1/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section id="main" class="main">
+
+        <div class="main__bg">
+            <div class="main__bg-left"></div>
+            <div class="main__bg-right">
+                <div class="main__bg-img">
+                    <img src="img/img-video.png" srcset="img/img-video@2x.png 2x" alt="">
+
+                    <div class="main__bg-content">
+
+                        <div class="main__bg-header">
+                            <div class="main__bg-header-left"></div>
+                            <div class="main__bg-header-middle">
+                                <span>MENTIFY</span>
+                            </div>
+                            <div class="main__bg-header-right"></div>
+                        </div>
+                        <!-- /.main__bg-header -->
+
+                        <div class="main__bg-body">
+                            
+                            <a href="#" class="main__bg-play">
+                                <img src="img/play-button.svg" alt="">
+                            </a>
+                            <!-- /.main__bg-play -->
+                            
+                            <p class="main__bg-title">LAUNCHING SOON...</p>
+                            <!-- /.main__bg-title -->
+                            
+                        </div>
+                        <!-- /.main__bg-body -->
+
+                    </div>
+                    <!-- /.main__bg-content -->
+
+                </div>
+                <!-- /.main__bg-content -->
+            </div>
+        </div>
+        <!-- /.main__bg -->
+
+        <div class="main__wrapper">
+            
+            <div class="main__wrapper-header">
+                
+                <div class="logo">
+                    <p class="logo__text">MENTIFY</p>
+                </div>
+                <!-- /.logo -->
+
+                <a href="#contactUsModal" class="main__link" data-effect="mfp-zoom-in" popup-js>
+                    Contact
+                </a>
+                <!-- /.main__link -->
+
+            </div>
+            <!-- /.main__wrapper-header -->
+            
+            <div class="main__wrapper-body">
+                <div class="main__wrapper-body-left">
+
+                    <h1 class="main__title">Lerne von Deutschlands erfolgreichsten Startup Gründern, Investoren und Digitalexperten.</h1>
+                    <p class="main__desc">Best practices und Masterclasses zu Copywriting von Gründern für Gründer. Melde dich jetzt zu unserem Newsletter an und erfahre als erstes wann es los geht.</p>
+
+                    <form class="main__form" action="" method="POST" autocomplete="off">
+                        <div class="main__form-field main__form-field--input">
+                            <label>
+                                <input type="text" class="main__form-input" name="" placeholder="Ihre E-Mail Adresse">
+                            </label>
+                        </div>
+                        <!-- /.main__form-field -->
+
+                        <div class="main__form-field main__form-field--checkbox">
+                            <div class="main__form-checkbox">
+                                <input type="checkbox" name="" id="check">
+                                <label for="check">
+                                    <span>
+                                        <i>
+                                            <u></u>
+                                        </i>
+                                    </span>
+                                    <span>Ich habe die Datenschutzerklärung gelesen uns akzeptiere sie.</span>
+                                </label>
+                            </div>
+                            <!-- /.main__checkbox -->
+                        </div>
+                        <!-- /.main__form-field -->
+
+                        <div class="main__form-field main__form-field--btn">
+                            <button type="submit" class="main__form-btn">Jetzt Anmelden</button>
+                        </div>
+                        <!-- /.main__form-field -->
+                    </form>
+
+                </div>
+                <div class="main__wrapper-body-right"></div>
+            </div>
+            <!-- /.main__wrapper-body -->
+
+            <div class="main__wrapper-footer">
+                <p>Copyright 2020 © PurelandGmbH</p>
+            </div>
+            <!-- /.main__wrapper-footer -->
+            
+        </div>
+        <!-- /.main__wrapper -->
+
+    </section>
+    <!-- /.main -->
+
+
+    <div id="contactUsModal" class="c-modal mfp-hide mfp-with-anim">
+
+        <div class="c-modal__header">
+            <p>Contact</p>
+        </div>
+        <div class="c-modal__body">
+            <p>Best practices und Masterclasses zu Copywriting von Gründern für Gründer.</p>
+            <p>Melde dich jetzt zu unserem Newsletter an und erfahre als erstes wann es los geht.</p>
+        </div>
+        <div class="c-modal__footer">
+            <div>
+                <a href="#" class="">
+                    <img src="img/call.svg" alt="">
+                </a>
+                <a href="#" class="">
+                    <img src="img/email.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+    var initPreventBehavior = function initPreventBehavior() {
+        var link = document.querySelectorAll("a");
+        link.forEach(function (val, idx) {
+            val.addEventListener("click", function (e) {
+                if (val.getAttribute("href") === "#") {
+                    e.preventDefault();
+                }
+            });
+        });
+    };
+
+    var initPopups = function initPopups() {
+        $('[popup-js]').magnificPopup({
+            type: 'inline',
+            fixedContentPos: true,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'is-show',
+            callbacks: {
+                beforeOpen: function beforeOpen() {
+                    this.st.mainClass = this.st.el.attr('data-effect');
+                },
+                close: function close() {}
+            }
+        });
+    };
+
+    initPreventBehavior();
+    initPopups();
+</script>
+</html>
